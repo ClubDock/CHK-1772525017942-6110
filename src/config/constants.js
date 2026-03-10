@@ -1,12 +1,12 @@
 // ─── NAV ITEMS ────────────────────────────────────────────────
 export const NAV = [
-  { id: "clubhq",   label: "Club HQ",      icon: "🏠" },
-  { id: "events",   label: "Events",        icon: "📅" },
-  { id: "things",   label: "Things To Do",  icon: "✅" },
-  { id: "crew",     label: "Your Crew",     icon: "👥" },
-  { id: "notices",  label: "Notice Board",  icon: "🔔" },
-  { id: "tools",    label: "Tools",         icon: "🔧" },
-];
+ { id: "dashboard", label: "Club HQ", icon: "🏠", path: "/dashboard" },
+ { id: "events", label: "Events", icon: "📅", path: "/events" },
+ { id: "tasks", label: "Things To Do", icon: "✅", path: "/tasks" },
+ { id: "crew", label: "Your Crew", icon: "👥", path: "/crew" },
+ { id: "notice", label: "Notice Board", icon: "🔔", path: "/notices" },
+ { id: "tools", label: "Tools", icon: "🛠️", path: "/tools" }
+]
 
 // ─── TASKS ────────────────────────────────────────────────────
 export const TASKS = {

@@ -1,6 +1,10 @@
 import React from "react";
-
-export default function LandingPage({ onEnter }) {
+import { useNavigate } from "react-router-dom"
+export default function LandingPage({}) {
+  const navigate = useNavigate();
+  const onEnter = () => {
+    navigate("/dashboard");
+  };
   return (
     <div
       style={{
@@ -53,9 +57,10 @@ export default function LandingPage({ onEnter }) {
               background: "#fff", color: "#111",
               padding: "13px 24px", borderRadius: 10,
               border: "none", cursor: "pointer",
+              transition:"0.2s",
               fontWeight: 600, fontSize: 15, marginBottom: 36,
-            }}
-          >
+            }}>
+          
             <span style={{ fontWeight: 800, fontSize: 16, color: "#4285f4" }}>G</span>
             Sign in with Google
           </button>
