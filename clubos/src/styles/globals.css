@@ -1,32 +1,114 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter, sans-serif;
 }
 
 html, body, #root {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #071a2f;
 }
 
-body {
-  font-family: 'DM Sans', 'Segoe UI', sans-serif;
-  background: #0d1117;
-  color: #e2e8f0;
-  overflow: hidden;
+.appContainer{
+  display:flex;
+  height:100vh;
+  background:#071a2f;
+}
+.sidebar{
+width:230px;
+background:#0b2540;
+padding:30px;
 }
 
-button {
-  font-family: inherit;
+.sidebar button{
+display:block;
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:none;
+border:none;
+color:white;
+text-align:left;
+cursor:pointer;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
+.contentArea{
+flex:1;
+display:flex;
+flex-direction:column;
 }
-::-webkit-scrollbar-track {
-  background: #0f1623;
+
+.topbar{
+height:60px;
+background:#081a2f;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
 }
-::-webkit-scrollbar-thumb {
-  background: #2d3748;
-  border-radius: 3px;
+
+.pageContent{
+  flex:1;
+  padding:40px;
+  overflow:auto;
+  background:#071a2f;
+}
+
+.pageHeader{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.primaryBtn{
+background:#3563e9;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+}
+
+.memberCard{
+background:#1a2942;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+}
+
+.taskCard{
+background:#1a2942;
+padding:15px;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+/* entire app layout */
+.appLayout{
+  display:flex;
+  height:100vh;
+  background:#071a2f;
+}
+
+/* right section */
+.mainArea{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  background:#071a2f;
+}
+
+/* page content area */
+.pageArea{
+  flex:1;
+  padding:40px;
+  background:#071a2f;
+  overflow:auto;
 }

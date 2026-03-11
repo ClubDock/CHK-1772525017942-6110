@@ -1,33 +1,32 @@
-import React from "react";
-import { s } from "../../styles/shared-styles";
-import { NAV } from "../../config/constants";
-
-export default function Sidebar({ page, setPage, onSignOut }) {
+export default function Sidebar({ setActivePage }) {
   return (
-    <div style={s.sidebar}>
-      {/* Logo */}
-      <div style={s.logo}>
-        <div style={s.logoIcon}>🛡</div>
-        <span style={s.logoText}>ClubDock</span>
-      </div>
+  <div className="sidebar">
 
-      {/* Nav links */}
-      <nav style={s.nav}>
-        {NAV.map((n) => (
-          <div
-            key={n.id}
-            onClick={() => setPage(n.id)}
-            style={s.navItem(page === n.id)}
-          >
-            <span>{n.icon}</span> {n.label}
-          </div>
-        ))}
-      </nav>
+  <h2>ClubDock</h2>
 
-      {/* Sign out */}
-      <div style={s.signout} onClick={onSignOut}>
-        ↩ Sign Out
-      </div>
-    </div>
-  );
-}
+  <button onClick={() => setActivePage("hq")}>
+    🏠 Club HQ
+  </button>
+
+  <button onClick={() => setActivePage("events")}>
+    📅 Events
+  </button>
+
+  <button onClick={() => setActivePage("tasks")}>
+    ✅ Things To Do
+  </button>
+
+  <button onClick={() => setActivePage("crew")}>
+    👥 Your Crew
+  </button>
+
+  <button onClick={() => setActivePage("notice")}>
+    📢 Notice Board
+  </button>
+
+  <button onClick={() => setActivePage("tools")}>
+    🛠 Tools
+  </button>
+
+</div> 
+  )}

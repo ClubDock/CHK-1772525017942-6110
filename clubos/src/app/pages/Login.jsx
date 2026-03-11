@@ -1,55 +1,50 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Login({ onLogin }) {
+function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div
       style={{
         height: "100vh",
+        background: "#060b1a",
         display: "flex",
-        alignItems: "center",
         justifyContent: "center",
-        background: "#090e1a",
-        fontFamily: "DM Sans, Segoe UI, sans-serif",
-        color: "#e2e8f0",
+        alignItems: "center",
+        flexDirection: "column",
+        color: "white",
+        fontFamily: "sans-serif"
       }}
     >
-      <div
+      <h1 style={{ fontSize: "36px", marginBottom: "10px" }}>
+        🚀 ClubOS
+      </h1>
+
+      <p style={{ marginBottom: "40px", opacity: 0.7 }}>
+        Manage your club members, tasks and events
+      </p>
+
+      <button
+        onClick={handleLogin}
         style={{
-          width: "360px",
-          padding: "40px",
-          borderRadius: "12px",
-          background: "#111827",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
-          textAlign: "center",
+          padding: "14px 30px",
+          fontSize: "16px",
+          borderRadius: "10px",
+          border: "none",
+          background: "#4f7cff",
+          color: "white",
+          cursor: "pointer",
+          boxShadow: "0px 6px 20px rgba(79,124,255,0.5)"
         }}
       >
-        <h1 style={{ marginBottom: "10px" }}>ClubDock</h1>
-
-        <p style={{ marginBottom: "30px", color: "#94a3b8" }}>
-          The operating system for student clubs
-        </p>
-
-        <button
-          onClick={onLogin}
-          style={{
-            width: "100%",
-            padding: "12px 16px",
-            borderRadius: "8px",
-            border: "none",
-            cursor: "pointer",
-            fontWeight: "600",
-            fontSize: "15px",
-            background: "#ffffff",
-            color: "#111",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "10px",
-          }}
-        >
-          Sign in with Google
-        </button>
-      </div>
+        🚀 Enter Dashboard
+      </button>
     </div>
   );
 }
+
+export default Login;
